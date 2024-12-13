@@ -1,4 +1,4 @@
-/* Ensures text over images is centered both vertically and horizontally */
+/* Ensures text over images is centered both vertically and horizontally in the carousel */
 .carousel-caption {
   position: absolute;
   top: 62.5%;
@@ -7,7 +7,7 @@
   text-align: center;
   padding: 10px;
   border-radius: 10px;
-  text-shadow: black;
+  color: white;
 }
 
 .carousel-item img {
@@ -15,34 +15,84 @@
   height: auto;
 }
 
+/* Styling for the services section */
 .services {
-  padding: 20px;
-  background-color: #fff;
+  padding: 40px 0; /* Adds vertical padding around the service sections */
+  background-color: #f8f9fa; /* Light gray background for the whole section */
 }
 
-.service-row {
-  display: flex;
-  justify-content: space-between;
+.row {
   margin-top: 20px;
 }
 
-.service-info {
-  width: 60%;
+/* More specific targeting for image size control */
+.service-image img, .col-md-6 img {
+  max-width: 50%; /* Adjust this to scale the image size */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
 }
 
-.service-info h3 {
+.service-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text vertically */
+}
+
+.service-text h2 {
   color: #333;
+  margin-bottom: 10px;
 }
 
-.btn.book-now {
-  background-color: #007bff;
-  color: white;
-  border: none;
+.service-text p {
+  color: #666; /* Slightly lighter text color for the paragraph */
+  margin-bottom: 20px;
+}
+
+  .col-md-6 {
+  margin-right: -15px; /* Negative margin pulls columns closer together */
+  margin-left: -15px; /* Adjust as necessary based on your layout */
+} 
+
+
+
+
+.btn.btn-outline-primary {
+  background-color: transparent; /* Clear background for the button */
+  color: #004085; /* Dark blue text color */
+  border: none; /* No border for a clean text-only look */
   padding: 10px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase; /* Keeps text uppercase */
+  font-weight: bold; /* Makes font bold */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer; /* Ensures the cursor changes to a pointer on hover */
 }
 
-.btn.book-now:hover {
-  background-color: #0056b3;
+.btn.btn-outline-primary:hover {
+  background-color: transparent; /* Remains transparent on hover */
+  color: #FFD700; /* Gold color on hover */
+}
+
+#Second h2, #Second p, #Second button{
+  padding-left: 50px;
+  padding-right: -10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .service-text, .service-image {
+    text-align: center;
+  }
+  .service-text {
+    order: 1; /* Moves text above the image on small devices */
+  }
+  .service-image {
+    order: 2;
+  }
+  .btn.btn-outline-primary {
+    width: 100%; /* Makes the button full width on smaller screens */
+    margin: 10px auto; /* Ensure some spacing around the button */
+  }
 }
