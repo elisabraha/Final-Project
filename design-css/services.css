@@ -1,0 +1,48 @@
+/* Ensures text over images is centered both vertically and horizontally */
+.carousel-caption {
+  position: absolute;
+  top: 62.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  text-shadow: black;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.services {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.service-info {
+  width: 60%;
+}
+
+.service-info h3 {
+  color: #333;
+}
+
+.btn.book-now {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.book-now:hover {
+  background-color: #0056b3;
+}
