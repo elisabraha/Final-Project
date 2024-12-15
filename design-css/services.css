@@ -1,213 +1,272 @@
-/* Ensures text over images is centered both vertically and horizontally in the carousel */
-.carousel-caption {
-  position: absolute;
-  top: 62.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
+/* General Styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
-
-/* Styling for the services section */
-.services {
-  padding: 40px 0; /* Adds vertical padding around the service sections */
-  background-color: #f8f9fa; /* Light gray background for the whole section */
-}
-
-.row {
-  margin-top: 20px;
-}
-
-/* More specific targeting for image size control */
-.service-image img, .col-md-6 img {
-  max-width: 70%; /* Adjust this to scale the image size */
-  height: auto; /* Maintain aspect ratio */
-  display: block;
-  margin: 0 auto; /* Center the image horizontally */
-}
-
-.service-text {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the text vertically */
-}
-
-.service-text h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.service-text p {
-  color: #666; /* Slightly lighter text color for the paragraph */
-  margin-bottom: 20px;
-}
-
-  .col-md-6 {
-  
-  margin-right: -150px; /* Negative margin pulls columns closer together */
-  margin-left: 50px; /* Adjust as necessary based on your layout */
-} 
 
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: papayawhip; /* Light grey, or any color you prefer */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
 }
 
 .container, .container-fluid {
-  background-color: transparent; /* Ensures no background on containers */
-  padding: 15px; /* Keeps Bootstrap padding */
+    background-color: transparent;
+    padding: 15px;
 }
 
+/* Carousel Styles */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Services Section Styles */
+.services {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.service-image img, .col-md-6 img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-text h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.service-text p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
 
 .btn.btn-outline-primary {
-  background-color: transparent; /* Clear background for the button */
-  color: #004085; /* Dark blue text color */
-  border: none; /* No border for a clean text-only look */
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-transform: uppercase; /* Keeps text uppercase */
-  font-weight: bold; /* Makes font bold */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-  cursor: pointer; /* Ensures the cursor changes to a pointer on hover */
+    background-color: transparent;
+    color: #004085;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.btn.btn-outline-primary:hover {
-  background-color: transparent; /* Remains transparent on hover */
-  color: #FFD700; /* Gold color on hover */
+.book-now {
+    background-color: transparent;
+    color: #004085;
+    border: solid 1px;
+    border-color: #004085;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.Second {
-    padding-left: 30px;
-    width: 200px;  /* Sets the maximum width of the text container */
-    word-wrap: break-word;  /* Ensures words wrap and do not overflow */
+.book-now:hover {
+    color: #FFD700; /* Gold color on hover */
 }
 
-
-.First {
-  padding-right: 30px;
-  width: 250px;  /* Sets the maximum width of the text container */
-  word-wrap: break-word;  /* Ensures words wrap and do not overflow */
+/* Added Alternating Layout Styles */
+.text-section {
+    text-align: left;
+    padding: 20px;
 }
 
-/* agu */
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.setting-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #d4a017; /* Gold color */
+    width: 400px;
+    margin: 10px 0 20px 0;
+}
+
+.discover-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-decoration: none;
+    position: relative;
+}
+
+.discover-link:hover {
+    color: #d4a017;
+}
+
+/* Contact Section */
 .custom-contact-container {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  margin: 0 auto; /* Ensures horizontal centering within its parent */
-  padding: 20px; /* Adds some padding around */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 40px;
 }
-
 
 .custom-contact-card {
-  background-color: #2a3b8c;
-  color: #ffffff;
-  padding: 30px 40px;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
+    background-color: #9c7f30;
+    color: white;
+    padding: 30px 40px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .custom-contact-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .custom-contact-description {
-  font-size: 14px;
-  margin-bottom: 20px;
-  line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .custom-contact-form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .custom-contact-input {
-  margin-bottom: 15px;
-  padding: 10px;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  outline: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
 }
 
 .custom-contact-input::placeholder {
-  color: #666;
+    color: #666;
 }
 
 .custom-contact-textarea {
-  resize: none;
-  height: 100px;
+    resize: none;
+    height: 100px;
 }
 
 .custom-contact-button {
-  background-color: white;
-  color: #2a3b8c;
-  font-size: 16px;
-  border: 1px solid #2a3b8c; 
-  border-radius: 4px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease; 
+    background-color: white;
+    color: #2a3b8c;
+    font-size: 16px;
+    border: 1px solid #2a3b8c;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .custom-contact-button:hover {
-  background-color: #2a3b8c;
-  color: white;
-  border: 1px solid white; 
-  border-radius: 4px;
+    background-color: #2a3b8c;
+    color: white;
+    border-color: white;
 }
 
-/* per header ni nav bar me e ndreq */
+/* Navbar Styles */
 .navbar {
-  background-color: #f8f9fa; /* Light gray background */
+    background-color: #f8f9fa;
 }
 
 .navbar-brand {
-  color: #007bff; /* Bootstrap primary blue for the brand */
+    color: #007bff;
+    font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-  color: #007bff; /* Matching link colors to the brand */
+    color: #007bff;
+    font-size: 16px;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #0056b3; /* Darker blue on hover for better interaction */
+    color: #0056b3;
 }
 
 .navbar.sticky-top {
-  z-index: 1020; /* Higher than the default to ensure it's on top */
-  top: 0;
+    top: 0;
+    position: sticky;
 }
 
 
-/* Responsive adjustments for smaller screens */
+/* Image Styling for Consistent Sizes */
+.image-section img, .service-image img {
+    width: 100%; /* Full width */
+    height: 350px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image is cropped to fit without distortion */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visuals */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .service-text, .service-image {
+    .text-section, .image-section {
+        text-align: center;
+    }
+    .text-section {
+        order: 1;
+    }
+    .image-section {
+        order: 2;
+    }
+    .btn.btn-outline-primary {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
     text-align: center;
-  }
-  .service-text {
-    order: 1; /* Moves text above the image on small devices */
-  }
-  .service-image {
-    order: 2;
-  }
-  .btn.btn-outline-primary {
-    width: 100%; /* Makes the button full width on smaller screens */
-    margin: 10px auto; /* Ensure some spacing around the button */
-  }
+    font-size: 14px;
 }
