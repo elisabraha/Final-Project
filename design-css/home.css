@@ -1,0 +1,671 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #F8F9FA; 
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to right, #3A7D8C, #457B9D); 
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #F1FAEE; /* Light Beige */
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/* Logo Styles */
+.logo {
+    width: 120px; /* Desired width for the logo */
+    max-width: 150px; /* Prevents the logo from growing too large */
+    height: auto; /* Maintains aspect ratio */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Adjustment for Smaller Screens */
+@media (max-width: 768px) {
+    .logo {
+        width: 100px; /* Smaller width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80px; /* Even smaller for mobile devices */
+    }
+}
+
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #F1FAEE;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+/* Underline Effect on Hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #A8DADC; 
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #A8DADC;
+    transform: translateY(-3px); /* Slight upward movement */
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo-container h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* CAROUSEL SECTION */
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%; /* Ensure the carousel fits the width */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slides Container */
+.slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Position it in the middle vertically */
+    left: 50%; /* Position it in the middle horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact center */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent background */
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+    text-align: center; /* Center the text */
+    z-index: 10; /* Ensure text appears above the image */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Slide Image */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire slide */
+    border-radius: 15px;
+    filter: brightness(70%); /* Darken the image slightly for better text visibility */
+    z-index: 1;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 28px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    z-index: 20; /* Ensure buttons appear above images */
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Carousel */
+@media (max-width: 768px) {
+    .carousel {
+        height: 60vh; /* Adjust for smaller screens */
+    }
+
+    .text-overlay {
+        font-size: 18px;
+    }
+
+    .prev, .next {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        font-size: 16px;
+        bottom: 10px;
+    }
+}
+
+
+/* ABOUT SECTION */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #F0F9FF; /* Soft Teal Tint */
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+/* About Image Wrapper */
+.about-photo-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-photo:hover {
+    transform: scale(1.05);
+}
+
+/* About Text */
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    color: #3A7D8C; /* Muted Teal */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Activities */
+.activities {
+    text-align: center;
+    padding: 40px;
+    background-color: #A8DADC; /* Soft Light Blue */
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #F0F9FF;; /* Soft Light Beige */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Events Section */
+.events {
+    background: #F0F9FF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.events h2 {
+    font-size: 2.5rem;
+    color: #1D3557;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Events Grid */
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.event-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-date {
+    background-color: #A8DADC;
+    color: #1D3557;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.event-details {
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.event-details h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #457B9D;
+}
+
+.event-details p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0 15px;
+    line-height: 1.5;
+}
+
+.btn {
+    background-color: #1D3557;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #457B9D;
+}
+
+
+/* General Section Styling */
+.chef-section {
+    background-color: #F0F9FF; 
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.chef-section h2 {
+    font-size: 2.5em;
+    color: #1D3557; 
+    margin-bottom: 10px;
+}
+
+.chef-description {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* Chef Section */
+.chef-section {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.chef-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1D3557;
+}
+
+.chef-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #457B9D;
+}
+
+.chef-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.chef-profile {
+    text-align: center;
+    position: relative;
+}
+
+.chef-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #E63946;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.chef-quote {
+    font-style: italic;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Dish Cards */
+.chef-specialties .dishes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dish-card {
+    background: #F1FAEE;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 15px;
+}
+
+.dish-info h4 {
+    margin: 10px 0 5px;
+    color: #457B9D;
+}
+
+.dish-info p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* CallToAction Section */
+.chef-cta {
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.chef-cta .btn {
+    background-color: #457B9D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.chef-cta .btn:hover {
+    background-color: #1D3557;
+}
+
+
+/* Footer */
+footer {
+    background-color: #3A7D8C; 
+    color: #F1FAEE;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-content div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-content a {
+    color: #F1FAEE; 
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+.footer-content a:hover {
+    color: #2A4E59; 
+}

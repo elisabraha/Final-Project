@@ -7,8 +7,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../design-css/services.css">
 </head>
-<body>
 
+<script>
+  // Load header
+  document.addEventListener("DOMContentLoaded", function () {
+      fetch("header.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("header").innerHTML = data);
+
+      // Load footer
+      fetch("footer.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("footer").innerHTML = data);
+  });
+</script>
+<body>
+  <div id="header"></div>
 <div id="imageSlider" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -78,6 +92,7 @@
   </div>
 </section>
 
+<div id="footer"></div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
