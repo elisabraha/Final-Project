@@ -8,71 +8,36 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Contact form submission with popup confirmation
-    const questionForm = document.querySelector('.question-form');
-    if (questionForm) {
-        questionForm.addEventListener('submit', function (event) {
-            event.preventDefault();
+    // Subscribe button click confirmation
+    const subscriptionForm = document.getElementById('subscription-form');
+    if (subscriptionForm) {
+        subscriptionForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting
 
-            // Show popup confirmation
-            alert('Thank you for your interest! Your question has been submitted.');
+            // Retrieve input values
+            const name = document.getElementById('name').value.trim();
+            const surname = document.getElementById('surname').value.trim();
+            const email = document.getElementById('email').value.trim();
 
-            // Clear the form inputs
-            questionForm.reset();
+            // Email validation (basic format check)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!email) {
+                alert('Please enter your email to subscribe.');
+                return; // Stop here if email is empty
+            }
+
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return; // Stop here if email format is invalid
+            }
+
+            // Show confirmation alert with email
+            alert(`Confirmation: Subscription for ${email} is complete!`);
+
+            // Clear the form after successful submission
+            subscriptionForm.reset();
         });
     }
 
-    // Book Now button click confirmation
-    const bookNowButtons = document.querySelectorAll('.book-now');
-    if (bookNowButtons.length > 0) {
-        bookNowButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                alert('Thank you for choosing this service! A representative will contact you soon.');
-            });
-        });
-    }
-
-    // Sticky Navbar
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        const navbarHeight = navbar.offsetHeight;
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY >= navbarHeight) {
-                navbar.classList.add('fixed-top', 'shadow-sm'); // Add Bootstrap's sticky equivalent
-            } else {
-                navbar.classList.remove('fixed-top', 'shadow-sm'); // Remove when back to the top
-            }
-        });
-    }
-
-    // Dynamically load the header
-    fetch('../view-html/header.html') 
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch header.html');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('header-container').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading header:', error);
-        });
-
-    // Dynamically load the footer
-    fetch('../view-html/footer.html') 
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch footer.html');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading footer:', error);
-        });
 });
