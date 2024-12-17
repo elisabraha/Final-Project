@@ -10,6 +10,9 @@ html, body {
     background-color: white;
 }
 
+
+
+
 .container, .container-fluid {
     background-color: transparent;
     padding: 15px;
@@ -272,17 +275,10 @@ hr.hr-body {
     }
 }
 
-/* Footer Styles */
-footer {
-    background-color: black;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    font-size: 14px;
-}
 
 #contact-us .card {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     border-radius: 8px; 
     border-color: #2a3b8c;
 }
+

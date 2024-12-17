@@ -32,20 +32,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.querySelector('.navbar');
-    
-        if (navbar) {
-            const navbarHeight = navbar.offsetHeight;
-    
-            window.addEventListener('scroll', () => {
-                if (window.scrollY >= navbarHeight) {
-                    navbar.classList.add('fixed-top', 'shadow-sm'); // Add Bootstrap's sticky equivalent
-                } else {
-                    navbar.classList.remove('fixed-top', 'shadow-sm'); // Remove when back to the top
-                }
-            });
-        }
-    });
-    
+    // Sticky Navbar
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const navbarHeight = navbar.offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= navbarHeight) {
+                navbar.classList.add('fixed-top', 'shadow-sm'); // Add Bootstrap's sticky equivalent
+            } else {
+                navbar.classList.remove('fixed-top', 'shadow-sm'); // Remove when back to the top
+            }
+        });
+    }
+
+    // Dynamically load the header
+    fetch('../view-html/header.html') 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch header.html');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading header:', error);
+        });
+
+    // Dynamically load the footer
+    fetch('../view-html/footer.html') 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch footer.html');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading footer:', error);
+        });
 });
