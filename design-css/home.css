@@ -7,7 +7,6 @@ body, html {
     background-color: #F8F9FA; 
 }
 
-
 /* CAROUSEL SECTION */
 .carousel {
     position: relative;
@@ -87,29 +86,6 @@ body, html {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* Responsive Carousel */
-@media (max-width: 768px) {
-    .carousel {
-        height: 60vh; /* Adjust for smaller screens */
-    }
-
-    .text-overlay {
-        font-size: 18px;
-    }
-
-    .prev, .next {
-        font-size: 20px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .text-overlay {
-        font-size: 16px;
-        bottom: 10px;
-    }
-}
-
 
 /* ABOUT SECTION */
 .about-section {
@@ -168,25 +144,6 @@ body, html {
     margin-bottom: 10px;
 }
 
-/* Responsive About Section */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-photo-wrapper {
-        margin-bottom: 20px;
-    }
-
-    .about-text h2 {
-        font-size: 2rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-}
 
 /* Default Button Style */
 .booking-btn {
@@ -205,9 +162,6 @@ body, html {
     background-color: #A0BFE8
    
   }
-  
-
-  
 
 /* Load More Button */
 .load-more {
@@ -224,14 +178,6 @@ body, html {
 
 .load-more:hover {
     background-color: #3A7D8C;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
 }
 
 .activities {
@@ -283,39 +229,6 @@ body, html {
 
 .load-more:hover {
     background-color: #3A7D8C;
-}
-
-/* Ensuring consistent button styling across browsers */
-button[type="submit"].load-more {
-    outline: none; /* Removes the outline on focus */
-    border: none; /* Ensures no border */
-}
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
-}
-
-
-
-/* General Styling */
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 /* Events Section */
@@ -399,21 +312,6 @@ body {
     margin: 10px 0 15px;
     line-height: 1.5;
 }
-
-.btn {
-    background-color: #1D3557;
-    color: #fff;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #457B9D;
-}
-
 
 /* Trainer Section */
 .trainer-section {
@@ -565,7 +463,7 @@ body {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    width: auto; /* Ensure it adjusts based on content */
+    width: auto;
 }
 
 .booking-form button.load-more:hover {
@@ -627,35 +525,6 @@ body {
 
 .testimonial-item p:last-child {
     font-weight: bold;
-}
-
-/* Specific button style for the testimonial section */
-.testimonial-btn {
-    background-color: #3498db; /* Use the specific color */
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-/* Hover effect */
-.testimonial-btn:hover {
-    background-color: #2980b9; /* Use the specific hover color */
-}
-
-
-.prev-testimonial {
-    left: 10px;
-}
-
-.next-testimonial {
-    right: 10px;
 }
 
 
