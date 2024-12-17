@@ -3,52 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Edge Recreation Center</title>
+    <title>Zen Zone</title>
     <link rel="stylesheet" href="../design-css/home.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../images/logo.png" alt="Serenity Edge Logo" class="logo">
-            <h1>Zen Zone</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="../view-html/services.html">Services</a></li>
-                <li><a href="#contact">Booking</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+
+
+    <div id="header-container"></div>
+
 
     <section id="home" class="carousel">
         <button class="prev" aria-label="Previous Slide">&#10094;</button>
         <div class="slides">
             <div class="slide">
                 <div class="text-overlay">
-                    <p>Dive into relaxation</p>
+                    <p>Where moments of serenity and adventure unite.</p>
                 </div>
-                <img src="../images/hotel1.jpg" alt="Relaxing Lounge Area">
+                <img src="../images/building3.jpg" alt="Relaxing Lounge Area">
             </div>
             <div class="slide">
                 <div class="text-overlay">
-                    <p>Unwind by the fire</p>
+                    <p>Where every splash leads to relaxation and fun.</p>
                 </div>
-                <img src="../images/bonfirenights.jpg" alt="Breathtaking Outdoor View">
+                <img src="../images/hotel1.jpg" alt="Breathtaking Outdoor View">
             </div>
             <div class="slide">
                 <div class="text-overlay">
-                    <p>Play your game</p>
+                    <p>Game on. Where every serve counts.</p>
                 </div>
-                <img src="../images/tennis.jpg" alt="Modern Fitness Facilities">
+                <img src="../images/courts.jpg" alt="Modern Fitness Facilities">
             </div>
             <div class="slide">
                 <div class="text-overlay">
-                    <p>Reach your goals</p>
+                    <p>Explore, unwind, and connect with nature.</p>
                 </div>
-                <img src="../images/gym1.jpg" alt="Luxurious Pool Area">
+                <img src="../images/nature.jpg" alt="Luxurious Pool Area">
             </div>
         </div>
         <button class="next" aria-label="Next Slide">&#10095;</button>
@@ -59,7 +48,7 @@
     <section id="about" class="about-section">
         <div class="about-content">
             <div class="about-photo-wrapper">
-                <img src="../images/hotel5.jpg" alt="Serenity Edge Center" class="about-photo">
+                <img src="../images/building4.jpg" alt="Serenity Edge Center" class="about-photo">
             </div>
             <div class="about-text">
                 <h2>Welcome to Zen Zone</h2>
@@ -95,8 +84,9 @@
                 </div>
             </div>
         </div>
-        <button id="next-activities" class="load-more">Next</button>
+        <a href="services.html" id="next-activities" class="load-more">View all activities</a>
     </section>
+    
     
 
 
@@ -119,7 +109,7 @@
                     <div class="event-details">
                         <h3>Outdoor Yoga Retreat</h3>
                         <p>Join us for a day of outdoor yoga, relaxation, and mindfulness in a serene environment.</p>
-                        <button class="btn">Learn More</button>
+                        <a href="#" class="load-more">Learn More</a>
                     </div>
                 </div>
     
@@ -132,11 +122,11 @@
                     <div class="event-details">
                         <h3>Family Fun Day</h3>
                         <p>A day filled with games, activities, entertainment, and delicious food for the whole family.</p>
-                        <button class="btn">Reserve Now</button>
+                        <a href="#" class="load-more">Reserve Now</a>
                     </div>
                 </div>
     
-                <!-- Workshop Highlight (Optional) -->
+                <!-- Workshop Highlight -->
                 <div class="event-card">
                     <div class="event-date">
                         <span class="day">22</span>
@@ -145,57 +135,58 @@
                     <div class="event-details">
                         <h3>Fitness Challenges</h3>
                         <p>Join our Fitness Challenges! Test your strength with gym and tennis workouts.</p>
-                        <button class="btn">Sign Up</button>
+                        <a href="#" class="load-more">Sign Up</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
+    
 
-<!-- Your Fitness Guide Section -->
-<section id="chef" class="chef-section">
+<<!-- Your Fitness Guide Section -->
+<section id="trainer" class="trainer-section">
     <div class="container">
         <h2>Your Fitness Guide</h2>
-        <p class="chef-description">
+        <p class="trainer-description">
             At Zen Zone, we believe in fostering health and wellness for every guest. Meet <span class="highlight">Alex Taylor</span>, our fitness expert, 
             dedicated to helping you achieve your goals and embrace a balanced lifestyle. 
         </p>
 
-        <!-- Chef Content -->
-        <div class="chef-content">
-            <!-- Chef Profile -->
-            <div class="chef-profile">
-                <div class="chef-badge">Coach</div>
-                <img src="../images/Coach.jpg" alt="Chef John Doe" class="profile-image">
+        <!-- Trainer Content -->
+        <div class="trainer-content">
+            <!-- Trainer Profile -->
+            <div class="trainer-profile">
+                <div class="trainer-badge">Coach</div>
+                <img src="../images/Coach.jpg" alt="Trainer Alex Taylor" class="profile-image">
                 <h3>Alex Taylor</h3>
-                <p class="chef-quote">"Fitness is not just about working out; it's about finding joy in movement and balance in life."</p>
+                <p class="trainer-quote">"Fitness is not just about working out; it's about finding joy in movement and balance in life."</p>
             </div>
 
-            <!-- Chef's Specialties -->
-            <div class="chef-specialties">
-                <h3>Specialties</h3>
-                <div class="dishes">
-                    <!-- Dish 1 -->
-                    <div class="dish-card">
-                        <img src="../images/yogagirl.jpg" alt="Signature Steak">
-                        <div class="dish-info">
+            <!-- Trainer's Specialties -->
+            <div class="trainer-specialties">
+                <h3>Fitness Sessions</h3>
+                <div class="sessions">
+                    <!-- Session 1 -->
+                    <div class="session-card">
+                        <img src="../images/yogagirl.jpg" alt="Yoga Flow">
+                        <div class="session-info">
                             <h4>Yoga Flow Sessions</h4>
                             <p>Reconnect your mind and body with restorative yoga classes.</p>
                         </div>
                     </div>
-                    <!-- Dish 2 -->
-                    <div class="dish-card">
-                        <img src="../images/fitnessguy.jpg" alt="Pan-Seared Salmon">
-                        <div class="dish-info">
+                    <!-- Session 2 -->
+                    <div class="session-card">
+                        <img src="../images/fitnessguy.jpg" alt="Personalized Plan">
+                        <div class="session-info">
                             <h4>Personalized Fitness Plans</h4>
                             <p>Workouts tailored to your goals and lifestyle.</p>
                         </div>
                     </div>
-                    <!-- Dish 3 -->
-                    <div class="dish-card">
-                        <img src="../images/workout.jpg" alt="Pesto Pasta Delight">
-                        <div class="dish-info">
+                    <!-- Session 3 -->
+                    <div class="session-card">
+                        <img src="../images/workout.jpg" alt="Group Workouts">
+                        <div class="session-info">
                             <h4>Group Workouts</h4>
                             <p>Fun, energetic classes to keep you motivated.</p>
                         </div>
@@ -204,36 +195,60 @@
             </div>
         </div>
         
-        <!-- Call to Action -->
-        <div class="chef-cta">
-            <p>Your adventure starts here — are you ready?</p>
-            <button class="btn">Join Us Today</button>
+        <!-- Booking Form -->
+        <div class="booking-form">
+            <h3>Book a Session</h3>
+            <form id="bookingForm">
+                <label for="sessionType">Select Session:</label>
+                <select id="sessionType" name="sessionType">
+                    <option value="yoga">Yoga Flow Sessions</option>
+                    <option value="personalized">Personalized Fitness Plans</option>
+                    <option value="group">Group Workouts</option>
+                </select>
+                <br><br>
+
+                <label for="sessionDate">Choose a Date:</label>
+                <input type="date" id="sessionDate" name="sessionDate" required>
+                <br><br>
+
+                <label for="sessionTime">Choose a Time:</label>
+                <input type="time" id="sessionTime" name="sessionTime" required>
+                <br><br>
+                
+                <button type="submit" class="booking-btn">Book Now</button>
+                
+            </form>
+        </div>
+        
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+            <p id="confirmationText"></p>
         </div>
     </div>
 </section>
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>123 Serenity Lane, Somewhere, Earth</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: info@zenzone.com</p>
+    <!-- testimonial-->
+    <section id="zen-zone-testimonials">
+        <h2>What Our Guests Say</h2>
+        <div class="testimonial-carousel-container">
+            <div class="testimonial-item">
+                <p>"The most relaxing experience I've ever had!"</p>
+                <p>- Guest 1</p>
             </div>
-            <div class="social-media">
-                <h3>Follow Us</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+            <div class="testimonial-item">
+                <p>"I love the fitness classes and the atmosphere here."</p>
+                <p>- Guest 2</p>
             </div>
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <a href="#about">About</a>
-                <a href="#activities">Activities</a>
-                <a href="#events">Events</a>
-                <a href="#contact">Contact</a>
+            <div class="testimonial-item">
+                <p>"A perfect place to recharge and reconnect."</p>
+                <p>- Guest 3</p>
             </div>
         </div>
-    </footer>
+        <!-- <button class="testimonial-btn" onclick="moveTestimonialSlide(-1)">&#10094;</button>
+        <button class="testimonial-btn" onclick="moveTestimonialSlide(1)">&#10095;</button> -->
+    </section>
+
+
+    <div id="footer-container"></div>
 
     <script src="..//scripts-JS/home.js"></script>
 </body>
