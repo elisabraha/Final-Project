@@ -1,0 +1,448 @@
+/* Author: [Adea Krasniqi] */
+/* I did not steal this code
+
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #3A7D8C, #457B9D); 
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #F1FAEE; /* Light Beige */
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/* Logo Styles */
+.logo {
+    width: 120px; /* Desired width for the logo */
+    max-width: 150px; /* Prevents the logo from growing too large */
+    height: auto; /* Maintains aspect ratio */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #F1FAEE;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+/* Underline Effect on Hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #A8DADC; 
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #A8DADC;
+    transform: translateY(-3px); /* upward*/
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    height: 100vh; /* Full viewport image */
+    background: url("../images/background.jpg");
+    background-size: cover; /* the background image covers the entire area */
+    background-position: center; /* Centering */
+    background-repeat: no-repeat;
+    color: #ffffff; /* fixing the text color so we can read it better */
+    position: relative;
+}
+
+.about-photo-wrapper img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    margin-left: 20px;
+    max-width: 500px;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.team-cards, .team-cards1,.team-cards2 {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.team-cards1{
+    margin-left: 5px;
+}
+.olta{
+    width: 100px;
+}
+.team-card2{
+    margin-left: 5px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yoga{
+    height: 75px;
+ 
+}
+
+.team-card img {
+    height: 75px;
+    
+}
+
+/* Centering Content*/
+.centered-content {
+    display: flex; /* Flexbox to center */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /* Full viewport height */
+    text-align: center; 
+    padding: 20px; 
+    
+    background-color: #f9f9f9;
+}
+
+.centered-content h2 {
+    font-size: 2.5rem; /*heading size */
+    margin-bottom: 15px; 
+}
+
+.centered-content p {
+    font-size: 1.2rem; /* fixing paragraph size */
+    line-height: 1.6; 
+    max-width: 700px; 
+    margin: 0 auto; 
+   
+}
+.provide {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Ensure it takes the full viewport height */
+    text-align: center; /* Align the text inside the container */
+     background-color: #f9f9f9;
+
+}
+
+.tennis {
+    width: 600px; /* Adjust the image width */
+    max-width: 100%; /* Ensure responsiveness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.desc {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-direction: column; /* Stack text content vertically */
+    word-wrap: break-word;
+    text-align: center; /* Ensures text is centered */
+    padding: 20px; /* Adds spacing inside the container */
+    height: 100%; /* Ensures it stretches to the parent container */
+    width: 300px;
+    background-color: #f9f9f9;
+}
+
+.desc-text {
+    
+    padding: 10px 20px; /* Add padding for better spacing */
+   
+    max-width: 700px; /* Restrict the width of text */
+    margin: 0 auto; /* Center align within the container */
+    margin-left: 5px;
+}
+
+.provide {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Aligns text */
+    background-color: #f9f9f9; /* Soft background color */
+    gap: 30px; /* Space between image and text */
+    margin-top: -79px;
+}
+
+.yoga-img {
+    width: 500px; /* Adjust the image width */
+    max-width: 100%; /* Ensure responsiveness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.desc {
+    display: flex;
+    justify-content: center; /* Centers content */
+    align-items: center; /* Centers content */
+    flex-direction: column; /* Stack elements vertically */
+    word-wrap: break-word;
+    text-align: center; /* Center align text */
+    padding: 20px; /* Spacing inside the container */
+    height: auto; /* Adjust height to fit content */
+    max-width: 400px; /* Restrict the text block width */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.desc-text {
+    padding: 10px 20px; /* Add spacing */
+    font-size: 1.1rem; /* Adjust text size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Slightly darker text color */
+    margin-top: 10px;
+}
+
+.provide {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Align text */
+    background-color: #f9f9f9; /* Light background */
+    gap: 30px; /* Space between image and text */
+}
+
+.gym-img {
+    width: 500px; /* Adjust image size */
+    max-width: 100%; /* Ensures responsiveness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.desc {
+    display: flex;
+    justify-content: center; /* Centers content */
+    align-items: center; /* Centers content */
+    flex-direction: column; /* Stack elements vertically */
+    word-wrap: break-word;
+    text-align: center; /* Center align text */
+    padding: 20px; /* Spacing inside the container */
+    height: auto; /* Adjust height to fit content */
+    max-width: 400px; /* Restrict text block width */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.desc-text {
+    padding: 10px 20px; /* Add spacing */
+    font-size: 1.1rem; /* Adjust text size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Slightly darker text color */
+    margin-top: 10px;
+}
+
+.provide {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Align text */
+    background-color: #f9f9f9; /* Light background */
+    gap: 30px; /* Space between image and text */
+}
+
+.conference-img {
+    width: 500px; /* Adjust image size */
+    max-width: 100%; /* Ensures responsiveness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.desc {
+    display: flex;
+    justify-content: center; /* Centers content */
+    align-items: center; /* Centers content */
+    flex-direction: column; /* Stack elements vertically */
+    word-wrap: break-word;
+    text-align: center; /* Center align text */
+    padding: 20px; /* Spacing inside the container */
+    height: auto; /* Adjust height to fit content */
+    max-width: 400px; /* Restrict text block width */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.desc-text {
+    padding: 10px 20px; /* Add spacing */
+    font-size: 1.1rem; /* Adjust text size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Slightly darker text color */
+    margin-top: 10px;
+}
+
+.provide {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Align text */
+    background-color: #f9f9f9; /* Light background */
+    gap: 30px; /* Space between image and text */
+}
+
+.bonfire-img {
+    width: 500px; /* Adjust image size */
+    max-width: 100%; /* Ensures responsiveness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.desc {
+    display: flex;
+    justify-content: center; /* Centers content */
+    align-items: center; /* Centers content */
+    flex-direction: column; /* Stack elements vertically */
+    word-wrap: break-word;
+    text-align: center; /* Center align text */
+    padding: 20px; /* Spacing inside the container */
+    height: auto; /* Adjust height to fit content */
+    max-width: 400px; /* Restrict text block width */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.desc-text {
+    padding: 10px 20px; /* Add spacing */
+    font-size: 1.1rem; /* Adjust text size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Slightly darker text color */
+    margin-top: 10px;
+}
+
+/*.provide{
+    display: flex;
+    justify-content: center;
+}
+.tennis{
+    width: 650px;
+}
+.desc{
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+}
+.desc-text{
+    border-radius: 200px;
+}
+/* Footer */
+/* Footer Styling */
+footer {
+    background-color: #3A7D8C; /* Footer background color */
+    color: #FFFFFF; /* Text color */
+    padding: 30px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Spread sections evenly */
+    align-items: flex-start; /* Align content to the top */
+    gap: 20px; /* Space between columns */
+    max-width: 1200px;
+    margin: 0 auto; /* Center align */
+}
+
+.footer-section {
+    flex: 1; /* Equal column width */
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    color: #A8DADC; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #F1FAEE; /* Lighter color on hover */
+}
+
+
+
+
+

@@ -1,0 +1,313 @@
+/* Anes Fonda */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('../images/pexels-burst-374911.jpg'); /* Added background image here */
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+  width: 300px;  /* Slightly smaller than 350px */
+  height: 450px;  /* Slightly smaller than 500px */
+  max-height: 80%; /* Prevents exceeding the viewport height */
+  padding: 22px;  /* Slightly less padding for a smaller feel */
+  background-color: rgba(255, 255, 255, 0.9);  /* Slightly more opaque */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: pulse 2s infinite;
+  transition: right 0.5s ease;
+  overflow-y: auto; /* Allows scrolling if content overflows */
+  border: 6px solid #B8D8D8; /* Light pastel color */ 
+  border-radius: 15px; /* Smooth rounded corners */
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  color: #555;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+select,
+textarea,
+input[type="month"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #A0937D;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #C1BAA1;
+}
+
+#message {
+  margin-top: 20px;
+  text-align: center;
+  color: #004754;
+  font-size: 14px;
+}
+
+#booking-details {
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.payment-section {
+  display: none;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  text-align: center;
+}
+
+.payment-options label {
+  display: block;
+  margin: 10px 0;
+}
+
+.payment-options input {
+  margin-right: 10px;
+}
+
+/* Styling for Credit Card Form */
+#credit-card-form {
+  margin-top: 20px;
+}
+
+#credit-card-form .form-group {
+  margin-bottom: 15px;
+}
+
+#credit-card-form input {
+  width: calc(100% - 20px);
+}
+
+/* Restrict card number input to 16 characters */
+#credit-card-form #card-number {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+/* Styling for expiry date input */
+#credit-card-form #expiry-date {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+/* Styling for CVV input */
+#credit-card-form #cvv {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+#anesi {
+  color: #3E3232;
+}
+
+/* Styles for hidden sections and validation message */
+#credit-card-form .hidden {
+  display: none;
+}
+
+#credit-card-form .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#payment-section {
+  display: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Header and Footer Full Width */
+header, footer {
+  width: 100%;
+  margin: 0;
+  padding: 0 15px; /* Adjust horizontal padding as needed */
+  background: linear-gradient(to right, #3A7D8C, #457B9D); /* Example gradient */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ensures content within header and footer is centered and limited to max-width */
+header .content, footer .content {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+}
+
+/* Navigation and Logo styling */
+.logo-container, .footer-content {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px; 
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #3A7D8C; 
+  color: #F1FAEE;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-content div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-content a {
+  color: #F1FAEE; 
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+}
+
+.footer-content a:hover {
+  color: #2A4E59; 
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 120px; /* Desired width for the logo */
+  max-width: 150px; 
+  height: auto; 
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo-container h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #F1FAEE; /* Light Beige */
+  animation: slideInLeft 1s ease-in-out;
+}
+
+/* Logo Styles */
+.logo {
+  width: 120px; /* Desired width for the logo */
+  max-width: 150px; 
+  height: auto; 
+  animation: fadeIn 1s ease-in-out;
+}
