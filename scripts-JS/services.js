@@ -1,3 +1,6 @@
+//Elisa Braha
+//This code belong to Elisa Braha and has not been copied by other sources
+
 document.addEventListener('DOMContentLoaded', function () {
     // Enable Bootstrap carousel functionality
     const carousel = document.querySelector('#imageSlider');
