@@ -72,14 +72,3 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
         }
     });
 });
-
-// Dynamically Load Header and Footer
-['header', 'footer'].forEach(section => {
-    fetch(`../view-html/${section}.html`)
-        .then(response => {
-            if (!response.ok) throw new Error(`Failed to fetch ${section}.html`);
-            return response.text();
-        })
-        .then(data => document.getElementById(`${section}-container`).innerHTML = data)
-        .catch(error => console.error(`Error loading ${section}:`, error));
-});
